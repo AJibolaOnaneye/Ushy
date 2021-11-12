@@ -8,7 +8,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
@@ -35,7 +35,7 @@ html {
 }
 
 .text-wrapper {
-  margin-top: 20rem;
+  margin-top: 28rem;
 }
 
 .image-wrap {
@@ -84,15 +84,17 @@ html {
   font-size: 18px;
   color: #000;
   padding: 1rem 1.5rem;
-  border: none;
+ border-width: 1px;
+  border-color: rgba(154, 159, 191, 0.2);
   outline: none;
   width: 500px;
   margin-right: 12px;
-  background-color: rgba(245, 245, 249);
+  /* background-color: rgba(245, 245, 249); */
   border-radius: 6px;
   font-family: inherit;
   letter-spacing: -0.025rem;
 }
+
 
 .form-box button {
   color: #ffffff;
@@ -100,10 +102,11 @@ html {
   font-size: 18px;
   border: none;
   border-radius: 0.5rem;
-  background: #333333;
+  background: rgba(1, 132, 251, 1);
   cursor: pointer;
   font-family: inherit;
   letter-spacing: -0.025rem;
+  
 }
 
 ::-webkit-input-placeholder {
@@ -121,8 +124,10 @@ html {
 }
 
 .img {
-  height: auto;
+  /* height: auto; */
 }
+
+
 
 
 
@@ -303,8 +308,9 @@ html {
   }
 }
 
+
 /*Small phones from 320px to 480px*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 321px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .container {
     height: 100vh;
     padding-left: 20px;
@@ -319,42 +325,42 @@ html {
   }
 
   .home-main-section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column-reverse;
+    /* height: 50vh; */
     justify-content: space-between;
   }
 
   .text-wrapper {
-    margin-top: 1rem;
-    margin-bottom: 9rem;
-    padding: 10px;
-    grid-column-start: 1;
-    grid-row-start: 1;
+    margin-top: 10rem;
+    padding: 0 10px ;
     text-align: justify;
+    z-index: 1;
   }
 
   .img {
     max-width: 100%;
-    width: 55vw;
-    transform: rotate(-30deg);
-    margin-bottom: -5rem;
+    width: 351.41px;
+    height: 492.38px;
+    /* display: inline-block; */
+    z-index: -1;
+    overflow: hidden;
   }
-
+  
   .image-wrap {
     flex-direction: row;
-    justify-content: flex-end;
-  }
-
-  .header-wrapper {
-    padding-bottom: 2.5rem;
+    justify-content: center;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 55%, rgba(255, 255, 255, 0.356) 100%) ;
+    position: absolute;
+    /* top: 16vh; */
+    padding-top: 2rem;
+    /* z-index: -1; */
   }
 
   .middle-title {
     font-size: 36px;
     font-weight: 500;
-    max-width: 80vw;
-    letter-spacing: -0.03em;
+    max-width: 50vw;
+    letter-spacing: -0.01rem;
+    text-align: justify;
   }
 
   .title {
@@ -362,7 +368,7 @@ html {
     color: #9a9fbf;
     letter-spacing: -0.025rem;
     font-weight: 500;
-    max-width: 85vw;
+    max-width: 60vw;
   }
 
   .end {
@@ -386,6 +392,106 @@ html {
   }
 
   .form-box button {
-    margin-top: 0.5rem;
+    margin-top: .5rem;
+   float: right;
+    margin-right: 1.2rem;
   }
+}
+/*Smallest phones from 280px to 419px*/
+@media only screen and (min-device-width: 280px) and (max-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+  .container {
+    height: 100vh;
+    padding-left: 5px;
+    overflow: hidden;
+  }
+
+  .logo {
+    margin-top: 20px;
+    cursor: pointer;
+    width: 40vw;
+    max-width: 100%;
+  }
+
+  .home-main-section {
+    height: 80vh;
+    /* margin-top: .5rem;  */
+    display: flex;
+    margin-bottom: 20rem;
+  }
+
+  .text-wrapper {
+    margin-top: 20vh;
+    padding: 0 10px ;
+    text-align: justify;
+    z-index: 1;
+    
+  }
+
+  .img {
+    max-width: 100%;
+    width: 351.41px;
+    height: 492.38px;
+    /* display: inline-block; */
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .image-wrap {
+    flex-direction: row;
+    justify-content: center;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 48%, rgba(255, 255, 255, 0.507) 100%) ;
+    position: absolute;
+    /* top: 16vh; */
+    padding-top: 2rem;
+    /* z-index: -1; */
+  }
+
+  .header-wrapper {
+    /* padding-bottom: 2.5rem; */
+  }
+
+  .middle-title {
+    font-size: 36px;
+    font-weight: bold;
+    max-width: 60vw;
+    letter-spacing: -0.03em;
+
+  }
+
+  .title {
+    font-size: 14px;
+    color: #9a9fbf;
+    letter-spacing: -0.025rem;
+    font-weight: 500;
+    max-width: 85vw;
+    text-align: justify;
+  }
+
+  .end {
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    font-weight: normal;
+    padding-bottom: 12px;
+    max-width: 85vw;
+  }
+
+  .title-launch {
+    font-size: 14px;
+    font-weight: 500;
+    color: #9a9fbf;
+    padding-bottom: 8px;
+    letter-spacing: -0.025rem;
+  }
+
+  .form-box input {
+    width: 85vw;
+    font-size: 13px;
+  }
+
+  .form-box button {
+    margin-top: .5rem;
+   float: right;
+    margin-right: 1.2rem;
+  }
+  
 }
